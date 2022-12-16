@@ -24,11 +24,11 @@
             <form action="<?= base_url('user/aksi_update_profile') ?>" method="POST">
                 <div class="form-group">
                     <label for="exampleInputEmail1">Name</label>
-                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    <input type="text" class="form-control" id="name" name="name" aria-describedby="emailHelp">
                 </div>
                 <div class="form-group">
                     <label for="exampleInputPassword1">Address</label>
-                    <input type="text" class="form-control" id="exampleInputPassword1">
+                    <input type="text" class="form-control" id="address" adress>
                 </div>
                 <div class="form-group">
                     <label for="exampleInputPassword1">Birth of date</label>

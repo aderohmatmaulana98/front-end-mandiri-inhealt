@@ -35,6 +35,9 @@ class User extends CI_Controller
         $this->load->view('user/index', $data);
         $this->load->view('template/footer');
     }
+    public function form_update_profil()
+    {
+    }
     public function aksi_update_profile()
     {
         $username = $this->session->userdata('username');
