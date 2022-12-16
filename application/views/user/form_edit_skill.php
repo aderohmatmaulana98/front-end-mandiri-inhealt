@@ -21,29 +21,17 @@
     <!-- Main content -->
     <section class="content">
         <div class="container-fluid">
-            <?= $this->session->flashdata('message');  ?>
-            <!-- Button trigger modal -->
-            <a href="<?= base_url('user/form_update_profil') ?>" class="btn btn-primary">Edit Data</a>
-            <table class="table table-striped mt-3">
-                <tbody>
-                    <tr>
-                        <td>Name</td>
-                        <td><?= $name1 ?></td>
-                    </tr>
-                    <tr>
-                        <td>Address</td>
-                        <td><?= $address1 ?></td>
-                    </tr>
-                    <tr>
-                        <td>Birth Of Date</td>
-                        <td><?= $bod1 ?></td>
-                    </tr>
-                    <tr>
-                        <td>Email</td>
-                        <td><?= $email1 ?></td>
-                    </tr>
-                </tbody>
-            </table>
+            <form action="<?= base_url('user/aksi_edit_skill') ?>" method="PUT" enctype="application/x-www-form-urlencoded">
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Skill ID</label>
+                    <input type="text" class="form-control" id="skill_id" name="skill_id" value="<?= $name1 ?>" required>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Skill Name</label>
+                    <input type="text" class="form-control" id="skill_name" name="skill_name" value="<?= $address1 ?>" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
         </div>
     </section>
     <!-- /.content -->

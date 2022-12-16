@@ -21,22 +21,22 @@
     <!-- Main content -->
     <section class="content">
         <div class="container-fluid">
-            <form action="<?= base_url('user/aksi_update_profile') ?>" method="POST">
+            <form action="<?= base_url('user/aksi_update_profile') ?>" method="PUT" enctype="application/x-www-form-urlencoded">
                 <div class="form-group">
                     <label for="exampleInputEmail1">Name</label>
-                    <input type="text" class="form-control" id="name" name="name" aria-describedby="emailHelp">
+                    <input type="text" class="form-control" id="name" name="name" value="<?= $name1 ?>" required>
                 </div>
                 <div class="form-group">
                     <label for="exampleInputPassword1">Address</label>
-                    <input type="text" class="form-control" id="address" adress>
+                    <input type="text" class="form-control" id="address" name="address" value="<?= $address1 ?>" required>
                 </div>
                 <div class="form-group">
                     <label for="exampleInputPassword1">Birth of date</label>
-                    <input type="date" class="form-control" id="exampleInputPassword1">
+                    <input type="date" class="form-control" id="bod" name="bod" value="<?= $bod1 ?>" required>
                 </div>
                 <div class="form-group">
                     <label for="exampleInputPassword1">email</label>
-                    <input type="email" class="form-control" id="exampleInputPassword1">
+                    <input type="email" class="form-control" id="email" name="email" value="<?= $email1 ?>" required>
                 </div>
                 <button type="submit" class="btn btn-primary">Submit</button>
             </form>

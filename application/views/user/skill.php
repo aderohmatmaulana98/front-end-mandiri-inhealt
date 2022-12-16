@@ -5,12 +5,12 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1 class="m-0">User Profile</h1>
+                    <h1 class="m-0">Skill</h1>
                 </div><!-- /.col -->
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
                         <li class="breadcrumb-item"><a href="#">Home</a></li>
-                        <li class="breadcrumb-item active">User Profile</li>
+                        <li class="breadcrumb-item active">Skill</li>
                     </ol>
                 </div><!-- /.col -->
             </div><!-- /.row -->
@@ -23,25 +23,24 @@
         <div class="container-fluid">
             <?= $this->session->flashdata('message');  ?>
             <!-- Button trigger modal -->
-            <a href="<?= base_url('user/form_update_profil') ?>" class="btn btn-primary">Edit Data</a>
+            <a href="<?= base_url('user/form_add_skill') ?>" class="btn btn-primary">Add Skill</a>
             <table class="table table-striped mt-3">
+                <thead>
+                    <th>Skill ID</th>
+                    <th> Skill Name</th>
+                    <th> Action</th>
+                </thead>
                 <tbody>
-                    <tr>
-                        <td>Name</td>
-                        <td><?= $name1 ?></td>
-                    </tr>
-                    <tr>
-                        <td>Address</td>
-                        <td><?= $address1 ?></td>
-                    </tr>
-                    <tr>
-                        <td>Birth Of Date</td>
-                        <td><?= $bod1 ?></td>
-                    </tr>
-                    <tr>
-                        <td>Email</td>
-                        <td><?= $email1 ?></td>
-                    </tr>
+                    <?php foreach ($skill_id as $si) : ?>
+                        <tr>
+                            <td><?= $si['skill_id'] ?></td>
+                            <td><?= $si['skill_name'] ?></td>
+                            <td>
+                                <a href="<?= base_url('user/form_edit_skill/' . $si['skill_id']) ?>"><span class="badge badge-pill badge-success">Edit</span></a>
+                                <a href=""><span class="badge badge-pill badge-danger">Hapus</span></a>
+                            </td>
+                        </tr>
+                    <?php endforeach; ?>
                 </tbody>
             </table>
         </div>
